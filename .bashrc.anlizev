@@ -1,0 +1,7 @@
+export PATH=./node_modules/.bin:$HOME/bin:$PATH
+
+#aliases
+alias rsync="rsync -l --progress"
+alias emacs="emacs -nw"
+alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep -n'
+alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep -n'

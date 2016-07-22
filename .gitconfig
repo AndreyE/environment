@@ -1,0 +1,30 @@
+[user]
+    name = Andrey Lizunov
+    email = anlizev@yandex-team.ru
+
+[core]
+    editor = emacs -nw
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad   %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    # my settings
+    stu = status -uno
+    ciam = commit --amend
+    rsth = reset --hard
+    logf = log --pretty=full
+    log = log --decorate=short
+    logbr = log --pretty=fuller --decorate=full --graph
+    lgbr = log  --pretty='format:%C(auto)%h %Cred%an %Creset%s %Cgreen(%ad)%Creset' --date=relative --graph
+    sortbr = for-each-ref --format='%(refname:short)' --sort=-authordate refs/heads/
