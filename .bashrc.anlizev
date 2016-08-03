@@ -3,6 +3,7 @@ alias rsync="rsync -l --progress"
 alias emacs="emacs -nw"
 alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep -n'
 alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep -n'
+alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep -n'
 
 # environment
 # output in english for programs started in console
