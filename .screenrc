@@ -9,3 +9,17 @@ term xterm-256color
 
 bind H hardcopy -h /home/aelizuno/screen.scrollback
 bind / eval "scrollback 0; scrollback 65536"
+
+# emacs keybindings for navigation in copy mode
+markkeys j=^N:k=^P:l=^F:0=^A:$=^E:^F=^V:' '=^@
+bindkey -m -t ^[v    stuff ^B
+bindkey -m    ^B     stuff h
+bindkey -m -t ^[a    stuff \^
+bindkey -m -t ^[f    stuff w
+bindkey -m -t ^[b    stuff b
+bindkey -m -t ^[0^[r stuff H
+# Nothing for 'M'
+bindkey -m -t ^[-^[r stuff L
+bindkey -m -t ^[<    stuff g
+bindkey -m -t ^[>    stuff G
+bindkey -m -t ^[d    stuff " e "
