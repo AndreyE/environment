@@ -23,6 +23,9 @@ set demangle-style gnu-v3
 set print sevenbit-strings off
 # END: pretty printers
 
+# always print everything
+set print elements 0
+
 #dpc [<count>] disassembles next (or 24 if not given) bytes starting from current location.
 define dpc
   if $argc == 1
