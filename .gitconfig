@@ -22,6 +22,7 @@
     # my settings
     stu = status -uno
     ciam = commit --amend
+    difc = diff --cached
     rsth = reset --hard
     logf = log --pretty=full
     log = log --decorate=short
