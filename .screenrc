@@ -3,11 +3,11 @@ escape ^Jj
 
 defscrollback 65536
 scrollback 65536
-hardcopydir /home/aelizuno
+hardcopydir /home/anlizev
 caption always "%-w%L>%{= BW}%n %t%{-}%52<%+w %L="
 term xterm-256color
 
-bind H hardcopy -h /home/aelizuno/screen.scrollback
+bind H hardcopy -h /home/anlizev/screen.scrollback
 bind / eval "scrollback 0; scrollback 65536"
 
 # emacs keybindings for navigation in copy mode
