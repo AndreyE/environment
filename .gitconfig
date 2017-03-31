@@ -4,6 +4,8 @@
 
 [core]
     editor = emacs -nw
+    eol = lf
+    autocrlf = false
 
 [color]
     diff = auto
