@@ -7,7 +7,10 @@ hardcopydir /home/aelizuno
 caption always "%-w%L>%{= BW}%n %t%{-}%52<%+w %L="
 term xterm-256color
 
-bind H hardcopy -h /home/aelizuno/screen.scrollback
+# disalbe the flow control
+defflow off
+
+bind H hardcopy -h /home/anlizev/screen.scrollback
 bind / eval "scrollback 0; scrollback 65536"
 
 # emacs keybindings for navigation in copy mode

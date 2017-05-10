@@ -9,6 +9,7 @@ alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*
 # environment
 # output in english for programs started in console
 export LC_ALL=en_US.UTF-8
+export GIT_EDITOR='emacs -nw'
 
 # SSH agent
 SSH_ENV="$HOME/.ssh/environment"
