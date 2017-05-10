@@ -1,10 +1,11 @@
 # aliases
 alias rsync="rsync -l --progress"
 alias emacs="emacs -nw"
-alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep -n'
-alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep -n'
-alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep -n'
-alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep -n'
+alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
+alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
+alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
+alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
+alias less="less -R"
 
 # environment
 # output in english for programs started in console
@@ -40,3 +41,6 @@ fi
 # -O sync parallel output
 # -l don't consume more than 50% of system resources
 MAKEFLAGS="-j $(expr $(nproc) / 2) -O --print-directory"
+
+export WORKON_HOME=$HOME/virtualenvs
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
