@@ -6,6 +6,8 @@ alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\
 alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
 alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
 alias less="less -R"
+# SVN
+alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | xargs -t rm -r"
 
 # environment
 # output in english for programs started in console

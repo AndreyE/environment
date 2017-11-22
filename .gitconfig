@@ -3,7 +3,7 @@
     email = anlizev@gmail.ru
 
 [core]
-    editor = emacs
+    editor = "emacs -nw"
     eol = lf
     autocrlf = false
 
