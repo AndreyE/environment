@@ -1,18 +1,6 @@
-# aliases
-alias rsync="rsync -l --progress"
-alias emacs="emacs -nw"
-alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
-alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
-alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
-alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
-alias less="less -R"
-# SVN
-alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | xargs -t rm -r"
-
-# environment
-# output in english for programs started in console
-export LC_ALL=en_US.UTF-8
-export GIT_EDITOR='emacs -nw'
+if [ -z $BASHRC_ANLIZEV_SOURCE_GUARD ]
+then
+export BASHRC_ANLIZEV_SOURCE_GUARD=defined
 
 # SSH agent
 SSH_ENV="$HOME/.ssh/environment"
@@ -37,6 +25,24 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+fi # if [ -z $BASHRC_ANLIZEV_SOURCE_GUARD ]
+
+# aliases
+alias rsync="rsync -l --progress"
+alias emacs="emacs -nw"
+alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
+alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
+alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
+alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
+alias less="less -R"
+# SVN
+alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | xargs -t rm -r"
+
+# environment
+# output in english for programs started in console
+export LC_ALL=en_US.UTF-8
+export GIT_EDITOR='emacs -nw'
 
 # My default make options
 # -j run in parallel
