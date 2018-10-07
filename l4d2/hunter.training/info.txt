@@ -1,0 +1,44 @@
+--- HUNTER TRAINING ---
+// Single Player:
+//
+// 1) Select "Play Single Player", NOT "Play Campaign".
+// 2) Choose Hunter Training in the addon campaign list, and start the game.
+// 3) Wait until you spawn as a ghost smoker in the start room.
+//
+// You can also start the maps using the console, with
+// "map hunter_training" for the Challenge Course or
+// "map_hunter_training_c21" for the Live Fire Course.
+//
+// Multiplayer:
+//
+// 1) Open L4D(2)
+// \/Skip this step if you do not have a dedicated server.
+// 2) Run "ms_dedicated_force_servers <server_ip>" in console, replacing <server_ip> with your server's IP address.
+// ("mm_dedicated_force_servers <server_ip>" in L4D2)
+// 3) Start a new Versus Lobby.
+// 4) Select Hunter Training in the addon campaign list.
+// 4a) Select "Best Available" (if you have a dedicated server).
+// 4b) Select "Local" (if you do not).
+// 5) When everyone is ready, start the game.
+alias inf_health_on "give health;wait 250;inf_health" //makes infected have "infinite" health by healing player every 1/4 second.
+bind X "alias inf_health inf_health_on;inf_health" //turns on auto-healing
+bind Y "alias inf_health wait" //turns off auto-healing
+
+--- FREE STYLE
+map c1m2_streets versus
+sv_cheats 1
+sb_all_bot_game 1
+director_stop
+give katana
+sb_unstick 0
+vs_max_team_switches 99
+
+bind K "kick Tank; wait; kick Boomer; wait; kick Smoker; wait; kick Hunter; wait; kick Nick; wait; kick "
+bind V "z_spawn witch"
+bind H "z_spawn hunter"
+bind C "z_spawn smoker"
+
+
+bind B "z_spawn boomer"
+z_vomit_debug 1
+z_vomit_interval 1
