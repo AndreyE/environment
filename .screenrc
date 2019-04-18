@@ -1,3 +1,5 @@
+shell -$SHELL
+
 # use ctrl-j instead of the default ctrl-a
 escape ^Jj
 
