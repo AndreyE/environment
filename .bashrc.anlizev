@@ -31,13 +31,13 @@ fi # if [ -z $BASHRC_ANLIZEV_SOURCE_GUARD ]
 # aliases
 alias rsync="rsync -l --progress"
 alias emacs="emacs -nw"
-alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
-alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
-alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
-alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
+alias grepsrc='gfind . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | gsed "s/ /\\\ /g" | ggrep -v "^.*\.svn/.*$" | gxargs grep --color=always -n'
+alias grepcmake='gfind . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | gsed "s/ /\\\ /g" | gxargs grep --color=always -n'
+alias grepmake='gfind . -regex "^.*Makefile$\|^.*\.mk$" | gsed "s/ /\\\ /g" | gxargs grep --color=always -n'
+alias greppy='gfind . -type f -regex "^.*\.py$" | gsed "s/ /\\\ /g" | ggrep -v "^.*\.svn/.*$" | gxargs grep --color=always -n'
 alias less="less -R"
 # SVN
-alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | xargs -t rm -r"
+alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | gxargs -t rm -r"
 
 # environment
 # output in english for programs started in console
@@ -48,7 +48,7 @@ export GIT_EDITOR='emacs -nw'
 # -j run in parallel
 # -O sync parallel output
 # -l don't consume more than 50% of system resources
-MAKEFLAGS="-j $(expr $(nproc) / 2) -O --print-directory"
+# MAKEFLAGS="-j $(expr $(nproc) / 2) -O --print-directory"
 
-export WORKON_HOME=$HOME/virtualenvs
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/virtualenvs
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
