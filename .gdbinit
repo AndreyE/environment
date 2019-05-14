@@ -4,6 +4,9 @@ set trace-commands on
 set logging on
 set tui border-kind space
 
+# MacOS settings
+set startup-with-shell off
+
 
 # BEGIN: pretty printers
 #python
