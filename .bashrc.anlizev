@@ -43,6 +43,7 @@ alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | xarg
 # output in english for programs started in console
 export LC_ALL=en_US.UTF-8
 export GIT_EDITOR='emacs -nw'
+export EDITOR='emacs -nw'
 
 # My default make options
 # -j run in parallel
