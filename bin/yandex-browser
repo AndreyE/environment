@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/Applications/Yandex.app/Contents/MacOS/Yandex $@
