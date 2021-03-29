@@ -29,13 +29,14 @@ fi
 fi # if [ -z $BASHRC_ANLIZEV_SOURCE_GUARD ]
 
 # aliases
-alias rsync="rsync -l --progress"
-alias emacs="emacs -nw"
+alias rsync='rsync -l --progress'
+alias emacs='emacs -nw'
 alias grepsrc='find . -type f -regex "^.*\.cpp$\|^.*\.c$\|^.*\.h$\|^.*\.hpp$\|^.*\.cxx$\|^.*\.hxx$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
 alias grepcmake='find . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
 alias grepmake='find . -regex "^.*Makefile$\|^.*\.mk$" | sed "s/ /\\\ /g" | xargs grep --color=always -n'
 alias greppy='find . -type f -regex "^.*\.py$" | sed "s/ /\\\ /g" | grep -v "^.*\.svn/.*$" | xargs grep --color=always -n'
-alias less="less -R"
+alias less='less -R'
+alias passgen='shuf -zer -n20  {A..Z} {a..z} {0..9}; echo ""'
 # SVN
 alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | xargs -t rm -r"
 
