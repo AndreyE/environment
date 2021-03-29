@@ -36,6 +36,8 @@ alias grepcmake='gfind . -regex "^.*CMakeLists\.txt$\|^.*\.cmake$" | gsed "s/ /\
 alias grepmake='gfind . -regex "^.*Makefile$\|^.*\.mk$" | gsed "s/ /\\\ /g" | gxargs grep --color=always -n'
 alias greppy='gfind . -type f -regex "^.*\.py$" | gsed "s/ /\\\ /g" | ggrep -v "^.*\.svn/.*$" | gxargs grep --color=always -n'
 alias less="less -R"
+alias passgen='shuf -zer -n20  {A..Z} {a..z} {0..9}; echo ""'
+
 # SVN
 alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | gxargs -t rm -r"
 
@@ -43,6 +45,7 @@ alias svn-clear="svn status | perl -lne 'if(/^\?\s+(.*?)$/){ print \$1 }' | gxar
 # output in english for programs started in console
 export LC_ALL=en_US.UTF-8
 export GIT_EDITOR='emacs -nw'
+export EDITOR='emacs -nw'
 
 # My default make options
 # -j run in parallel
