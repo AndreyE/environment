@@ -52,5 +52,7 @@ export EDITOR='emacs -nw'
 # -l don't consume more than 50% of system resources
 MAKEFLAGS="-j $(expr $(nproc) / 2) -O --print-directory"
 
-export WORKON_HOME=$HOME/virtualenvs
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/virtualenvs
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+ssh-add -K >& /dev/null
